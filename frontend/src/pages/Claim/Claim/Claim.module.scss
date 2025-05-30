@@ -1,0 +1,15 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.claim {
+	@include general;
+
+	& {
+		background-color: $color-bg-alt;
+	}
+
+	a {
+		background-color: $color-accent-hover;
+		margin-bottom: 10px;
+	}
+}

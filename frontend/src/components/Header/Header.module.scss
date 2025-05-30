@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+
+.header {
+	background-color: $color-primary;
+	color: $color-bg-alt;
+
+	display: flex;
+	justify-content: space-around;
+
+	&_logo {
+		width: auto;
+		height: 90px;
+	}
+
+	h2 {
+		span {
+			color: $text-muted;
+		}
+	}
+
+	.user {
+		margin: auto 0;
+
+		h2 {
+			margin: 0;
+			margin-bottom: 5px;
+			text-align: center;
+		}
+	}
+
+	.login {
+		margin: auto 0;
+		padding: 15px 25px;
+
+		border: 0;
+		border-radius: 12px;
+
+		color: $color-bg-alt;
+
+		background-color: $color-accent;
+
+		transition: 0.2s ease;
+
+		&:hover {
+			transition: 0.2s ease;
+			background-color: $color-accent-hover;
+		}
+	}
+	button {
+		background-color: $color-primary-bg;
+		color: $text-main;
+	}
+}

@@ -1,0 +1,9 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.newMaintenance {
+	@include general;
+	& {
+		background-color: $color-bg-alt;
+	}
+}

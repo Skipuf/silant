@@ -1,0 +1,9 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.newMachine {
+	@include general;
+	& {
+		background-color: $color-bg-alt;
+	}
+}

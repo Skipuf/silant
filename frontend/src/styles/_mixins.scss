@@ -1,0 +1,95 @@
+// responsive breakpoints
+$breakpoint-2k: 1920px;
+$breakpoint-xl: 1536px;
+$breakpoint-lg: 1440px;
+$breakpoint-md: 1366px;
+$breakpoint-sm: 1100px;
+$breakpoint-min: 1100px;
+
+// container defaults
+$container-max-width: 1200px;
+$container-padding-lg: 2rem;
+$container-padding-md: 1rem;
+$container-padding-sm: 0.5rem;
+
+// Центрирование флексом
+@mixin flex-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+// Общий базовый миксин
+// На больших экранах max-width: 50%, на средних и маленьких — 100%
+@mixin general {
+	@include flex-center;
+	animation: fadeIn 0.5s ease-in;
+
+	width: 100%;
+	max-width: 50%;
+	margin: 50px auto 50px;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 2px 4px rgba(#000, 0.1);
+
+	h2 {
+		margin-top: 0;
+	}
+
+	// Экраны ≤1366px: полная ширина
+	@include respond-to(xl) {
+		max-width: 70%;
+		margin: 30px auto;
+		padding: 1.5rem;
+	}
+
+	// Экраны ≤360px: полная ширина с уменьшёнными отступами
+	@include respond-to(sm) {
+		max-width: 90%;
+		margin: 20px auto;
+		padding: 1rem;
+	}
+}
+
+// Анимация появления
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// Миксин для медиазапросов
+// Использование: @include respond-to(md) { ... }
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == '2k' {
+		@media (max-width: $breakpoint-2k) {
+			@content;
+		}
+	} @else if $breakpoint == xl {
+		@media (max-width: $breakpoint-xl) {
+			@content;
+		}
+	} @else if $breakpoint == lg {
+		@media (max-width: $breakpoint-lg) {
+			@content;
+		}
+	} @else if $breakpoint == md {
+		@media (max-width: $breakpoint-md) {
+			@content;
+		}
+	} @else if $breakpoint == sm {
+		@media (max-width: $breakpoint-sm) {
+			@content;
+		}
+	} @else if $breakpoint == 'min' {
+		@media (max-width: $breakpoint-min) {
+			@content;
+		}
+	} @else {
+		@warn "Unknown breakpoint: #{$breakpoint}.";
+	}
+}

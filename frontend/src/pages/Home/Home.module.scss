@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.nav {
+	@include general;
+	& {
+		background-color: $color-bg-alt;
+
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	a {
+		background-color: $color-accent-hover;
+	}
+}
+.home {
+	@include general;
+
+	& {
+		background-color: $color-bg-alt;
+	}
+}

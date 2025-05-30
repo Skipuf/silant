@@ -1,0 +1,7 @@
+@use '../../styles/variables' as *;
+
+.error {
+	color: $color-accent;
+	text-align: center;
+	margin: 5px;
+}

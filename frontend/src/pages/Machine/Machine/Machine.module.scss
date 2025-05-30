@@ -1,0 +1,19 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.machine {
+	@include general;
+	& {
+		background-color: $color-bg-alt;
+	}
+
+	button {
+		background: $color-accent-hover;
+		margin-bottom: 10px;
+	}
+
+	a {
+		background-color: $color-accent-hover;
+		margin-bottom: 10px;
+	}
+}

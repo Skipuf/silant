@@ -1,0 +1,38 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.accordion {
+	width: 100%;
+	overflow: hidden;
+
+	&Label {
+		display: flex;
+		align-items: center;
+		margin: 15px auto;
+		background: $color-primary-light;
+	}
+
+	&Content {
+		@include flex-center;
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease, opacity 0.5s ease;
+	}
+
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+
+		&:checked {
+			+ .accordionLabel {
+				opacity: 1;
+			}
+			~ .accordionContent {
+				max-height: 1000px;
+				opacity: 1;
+			}
+		}
+	}
+}

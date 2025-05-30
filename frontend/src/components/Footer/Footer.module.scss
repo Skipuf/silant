@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.footer {
+	width: 100%;
+
+	background-color: $color-primary;
+	color: $color-bg-alt;
+
+	display: flex;
+	justify-content: space-around;
+
+	h2 {
+		span {
+			color: $text-muted;
+		}
+	}
+}
