@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
-import { useUser } from '../../../../context/UserContext'
+import { useUser } from '@context/UserContext'
 
-import { handleChange } from '../../../../tools/state'
-import { fetchDataLogin } from '../../../../tools/api'
+import { handleChange } from '@tools/state'
+import { fetchDataLogin } from '@tools/api'
 
-import ShortTable from '../../../../components/Table/ShortTable'
-import Filters from '../../../../components/Filters/Filters'
+import ShortTable from '@components/Table/ShortTable'
+import Filters from '@components/Filters/Filters'
 
 const MainPanel = () => {
 	const { user } = useUser()

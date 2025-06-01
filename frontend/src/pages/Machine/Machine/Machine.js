@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
-import { useUser } from '../../../context/UserContext'
+import { useUser } from '@context/UserContext'
 
-import { fetchDataLogin } from '../../../tools/api'
+import { fetchDataLogin } from '@tools/api'
 
-import FullTable from '../../../components/Table/FullTable'
-import Accordion from '../../../components/Accordion/Accordion'
+import FullTable from '@components/Table/FullTable'
+import Accordion from '@components/Accordion/Accordion'
 
 import TableMaintenances from './TableMaintenances'
 import TableClaims from './TableClaims'

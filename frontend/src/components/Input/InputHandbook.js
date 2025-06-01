@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 
-import { fetchDataLogin } from './../../tools/api'
+import { fetchDataLogin } from '@tools/api'
 
-import { useUser } from '../../context/UserContext'
+import { useUser } from '@context/UserContext'
 
 import styles from './input.module.scss'
 

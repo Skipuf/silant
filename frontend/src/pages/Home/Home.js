@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Lookup from './components/lookup/Lookup'
 
-import { useUser } from '../../context/UserContext'
+import { useUser } from '@context/UserContext'
 
 import MainPanel from './components/mainPanel/MainPanel'
 

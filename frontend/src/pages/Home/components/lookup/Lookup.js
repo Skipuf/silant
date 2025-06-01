@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { fetchDataNotLogin } from '../../../../tools/api'
+import { fetchDataNotLogin } from '@tools/api'
 
 import styles from './Lookup.module.scss'
 
-import FullTable from './../../../../components/Table/FullTable'
+import FullTable from '@components/Table/FullTable'
 
 const Lookup = () => {
 	const [numberMachine, setNumberMachine] = useState('')

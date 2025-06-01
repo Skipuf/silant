@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useUser } from '../../../context/UserContext'
+import { useUser } from '@context/UserContext'
 import styles from './NewMaintenance.module.scss'
 
-import { fetchDataLogin } from '../../../tools/api'
-import { handleChange } from '../../../tools/state'
+import { fetchDataLogin } from '@tools/api'
+import { handleChange } from '@tools/state'
 
-import InputText from '../../../components/Input/InputText'
-import InputDate from '../../../components/Input/InputDate'
-import InputNumber from '../../../components/Input/InputNumber'
-import InputSelect from '../../../components/Input/InputSelect'
-import InputHandbook from '../../../components/Input/InputHandbook'
+import InputText from '@components/Input/InputText'
+import InputDate from '@components/Input/InputDate'
+import InputNumber from '@components/Input/InputNumber'
+import InputSelect from '@components/Input/InputSelect'
+import InputHandbook from '@components/Input/InputHandbook'
 
 const NewMaintenance = () => {
 	const [machine, setMachine] = useState(null)

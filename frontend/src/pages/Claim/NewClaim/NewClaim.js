@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useUser } from '../../../context/UserContext'
+import { useUser } from '@context/UserContext'
 import styles from './NewClaim.module.scss'
 
-import { handleChange } from '../../../tools/state'
+import { handleChange } from '@tools/state'
 
-import InputText from '../../../components/Input/InputText'
-import InputDate from '../../../components/Input/InputDate'
-import InputNumber from '../../../components/Input/InputNumber'
-import InputHandbook from '../../../components/Input/InputHandbook'
+import InputText from '@components/Input/InputText'
+import InputDate from '@components/Input/InputDate'
+import InputNumber from '@components/Input/InputNumber'
+import InputHandbook from '@components/Input/InputHandbook'
 
 const NewClaim = () => {
 	const [machine, setMachine] = useState(null)

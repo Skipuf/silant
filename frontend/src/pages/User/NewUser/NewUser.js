@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { useUser } from '../../../context/UserContext'
+import { useUser } from '@context/UserContext'
 import styles from './NewUser.module.scss'
 
-import { fetchDataLogin } from '../../../tools/api'
-import { handleChange } from '../../../tools/state'
+import { handleChange } from '@tools/state'
 
-import InputText from '../../../components/Input/InputText'
-import InputSelect from '../../../components/Input/InputSelect'
+import InputText from '@components/Input/InputText'
+import InputSelect from '@components/Input/InputSelect'
 
 const NewUser = () => {
 	const navigate = useNavigate()

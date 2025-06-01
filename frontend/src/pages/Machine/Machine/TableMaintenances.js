@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
-import { fetchDataLogin } from '../../../tools/api'
-import { handleChange } from '../../../tools/state'
+import { fetchDataLogin } from '@tools/api'
+import { handleChange } from '@tools/state'
 
-import ShortTable from '../../../components/Table/ShortTable'
-import Filters from '../../../components/Filters/Filters'
+import ShortTable from '@components/Table/ShortTable'
+import Filters from '@components/Filters/Filters'
 
-import { useUser } from '../../../context/UserContext'
+import { useUser } from '@context/UserContext'
 
 const TableMaintenances = () => {
 	const [maintenances, setMaintenances] = useState(null)

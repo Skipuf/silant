@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { useUser } from '../../context/UserContext'
+import { useUser } from '@context/UserContext'
 
 import styles from './Login.module.scss'
 
